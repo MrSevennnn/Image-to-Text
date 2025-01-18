@@ -1,0 +1,88 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Buttons for Image Selection and Capture -->
+
+    <Button
+        android:id="@+id/btnSelectImage"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="112dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="36dp"
+        android:text="Chọn ảnh"
+        app:icon="@drawable/baseline_add_box_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCaptureImage"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="108dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Chụp ảnh"
+        app:icon="@drawable/baseline_add_a_photo_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ImageView for Selected or Captured Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <!-- Button for Conversion -->
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Chuyển đổi"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- EditText for Text Output -->
+
+    <!-- Spinner for Selection -->
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:layout_marginTop="32dp"
+        android:gravity="top"
+        android:hint="Text"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvert" />
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="96dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="4dp"
+        android:text="Lưu"
+        app:icon="@drawable/baseline_arrow_downward_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

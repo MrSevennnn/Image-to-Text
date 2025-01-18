@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ImageToText</string>
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Vietnamese</item>
+    </string-array>
+</resources>
